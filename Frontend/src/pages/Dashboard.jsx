@@ -5,7 +5,7 @@ function Dashboard() {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/dashboard", {
+    axios.get("https://team-task-manager-production-1149.up.railway.app/api/dashboard", {
       headers: { Authorization: "Bearer " + localStorage.getItem("token") }
     }).then((res) => setData(res.data));
   }, []);

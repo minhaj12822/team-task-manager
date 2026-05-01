@@ -5,7 +5,7 @@ function Tasks() {
   const [tasks, setTasks] = useState([]);
 
   const fetchTasks = async () => {
-    const res = await axios.get("http://localhost:5000/api/tasks", {
+    const res = await axios.get("https://team-task-manager-production-1149.up.railway.app/api/tasks", {
       headers: { Authorization: "Bearer " + localStorage.getItem("token") }
     });
 

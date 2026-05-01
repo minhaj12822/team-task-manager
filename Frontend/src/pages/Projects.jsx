@@ -5,7 +5,7 @@ function Projects() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/projects", {
+    axios.get("https://team-task-manager-production-1149.up.railway.app/api/projects", {
       headers: { Authorization: "Bearer " + localStorage.getItem("token") }
     }).then((res) => setProjects(res.data));
   }, []);
